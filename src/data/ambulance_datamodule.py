@@ -4,7 +4,7 @@ import rootutils
 
 ROOT = rootutils.autosetup()
 
-from typing import List, Optional
+from typing import Optional
 
 from lightning import LightningDataModule
 from torch.utils.data import DataLoader, Dataset
