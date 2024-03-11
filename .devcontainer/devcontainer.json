@@ -1,0 +1,32 @@
+{
+    "name": "ambulance-cls",
+    "privileged": false,
+    "remoteUser": "didi",
+    "build": {
+        "dockerfile": "../dockerfile.devel",
+        "args": {"USERNAME": "didi"}
+    },
+    "workspaceFolder": "/didi",
+    "workspaceMount": "source=${localWorkspaceFolder},target=/home/didi/ambulance-cls,type=bind",
+    "mounts": ["source=/var/run/docker.sock,target=/var/run/docker.sock,type=bind"],
+    "containerEnv": {"TZ": "Asia/Jakarta"},
+    "runArgs": ["--gpus=all", "--shm-size=8g"],
+    "features": {
+        "ghcr.io/devcontainers/features/docker-outside-of-docker": {}
+    },
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "ms-python.python",
+                "ms-python.vscode-pylance",
+                "ms-python.black-formatter",
+                "ms-python.isort",
+                "eamodio.gitlens",
+                "VisualStudioExptTeam.vscodeintellicode",
+                "redhat.vscode-yaml",
+                "yzhang.markdown-all-in-one",
+                "ms-azuretools.vscode-docker"
+            ]
+        }
+    }
+}
