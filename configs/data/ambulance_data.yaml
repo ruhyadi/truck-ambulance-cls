@@ -1,13 +1,9 @@
 # PPE datamodule
 
-_target_: src.data.ppe_datamodule.PpeDataModule
+_target_: src.data.ambulance_datamodule.AmbulanceDataModule
 
-images_path: data/ppe/images # path to images
-train_json_path: data/ppe/annotations/instances_default.json # path to train coco json labels
-val_json_path: data/ppe/annotations/instances_default.json # path to val coco json labels
-helmet_classes: ["off", "yellow", "white", "red", "blue", "green"] # helmet classes
-vest_classes: ["off", "orange", "green", "red", "blue"] # vest classes
-boots_classes: ["off", "on"] # boots classes
-activity_classes: ["berdiri", "jongkok", "duduk"]
+images_path: data/ambulance/images # path to images
+train_json_path: data/ambulance/annotations/train_instance.json # path to train coco json labels
+val_json_path: data/ambulance/annotations/val_instance.json # path to val coco json labels
 batch_size: 8 # batch size
 num_workers: 4 # number of workers

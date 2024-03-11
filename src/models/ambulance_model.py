@@ -67,7 +67,9 @@ class AmbulanceLightningModel(LightningModule):
         x, y = batch
         y_hat = self(x)
         loss = self.criterion(y_hat, y)
+
         y_hat = torch.argmax(y_hat, dim=1)
+        y = torch.argmax(y, dim=1)
 
         return loss, y_hat, y
     

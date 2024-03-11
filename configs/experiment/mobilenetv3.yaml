@@ -4,8 +4,8 @@
 # python train.py experiment=example
 
 defaults:
-  - override /data: ppe_data
-  - override /model: ppe_model
+  - override /data: ambulance_data
+  - override /model: ambulance_model
   - override /callbacks: default
   - override /trainer: gpu
 
@@ -15,11 +15,6 @@ defaults:
 tags: ["mobilenetv3"]
 
 seed: 42069
-
-data:
-  images_path: data/images
-  label_path: data/annotations/downsample.json
-  batch_size: 64
 
 trainer:
   min_epochs: 5
